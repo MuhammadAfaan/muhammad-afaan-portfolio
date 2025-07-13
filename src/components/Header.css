@@ -1,0 +1,100 @@
+.site-header {
+  position: sticky; /* Makes the header stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: padding 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+
+}
+
+/* --- Left Side: Logo --- */
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+/* --- Center: Navigation --- */
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+
+.header-nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--primary-text-color);
+}
+
+/* Underline effect on hover */
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-text-color);
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+/* --- Right Side: Resume Button --- */
+/* (This assumes you have base .btn styles in index.css) */
+.btn.btn-dark-outline {
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+.btn.btn-dark-outline:hover {
+  background-color: var(--primary-text-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .header-nav {
+    display: none; /* Hide navigation on smaller screens for simplicity */
+  }
+  .site-header {
+    padding: 1rem 2rem;
+  }
+}

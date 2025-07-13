@@ -1,0 +1,96 @@
+.skills-section {
+  padding: 2rem 3rem;
+  background-color: var(--bg-color);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Title with Underline --- */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: var(--primary-text-color);
+  display: inline-block; /* Allows underline to be positioned relative to the text */
+  position: relative;
+}
+
+.title-underline {
+  height: 4px;
+  width: 70px;
+  background-color: #007bff; /* A nice accent blue */
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+}
+
+/* --- Grid and Cards --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.skill-category-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px; /* Slightly more rounded */
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+}
+
+.skill-category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+/* --- Skills List (Pills) --- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-item {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* --- Color Themes for Pills and Icons --- */
+/* Programming Languages Theme (Blue) */
+.skill-icon.languages { color: #007bff; }
+.skill-item.languages { background-color: #007bff; }
+
+/* Technical Skills Theme (Green) */
+.skill-icon.technical { color: #28a745; }
+.skill-item.technical { background-color: #28a745; }
+
+/* Tools & Platforms Theme (Cyan) */
+.skill-icon.tools { color: #17a2b8; }
+.skill-item.tools { background-color: #17a2b8; }

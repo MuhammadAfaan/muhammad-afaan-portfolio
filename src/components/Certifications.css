@@ -1,0 +1,142 @@
+.certifications-section {
+  padding: 2rem 3rem;
+  background-color: var(--bg-color);
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Re-using these title styles for consistency */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: var(--primary-text-color);
+  display: inline-block;
+  position: relative;
+}
+
+.title-underline {
+  height: 4px;
+  width: 70px;
+  background-color: #6f42c1; /* Vibrant purple for this section */
+  border-radius: 2px;
+  margin: 0.5rem auto 0;
+}
+
+/* --- Grid and Cards --- */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+
+@keyframes fadeInGrow {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.certification-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid; /* Themed side border */
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  animation: fadeInGrow 0.5s ease-out forwards;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Vibrant Theming for each card's border */
+.certifications-grid .certification-card:nth-child(4n + 1) { border-left-color: #007bff; animation-delay: 0.1s; }
+.certifications-grid .certification-card:nth-child(4n + 2) { border-left-color: #28a745; animation-delay: 0.2s; }
+.certifications-grid .certification-card:nth-child(4n + 3) { border-left-color: #fd7e14; animation-delay: 0.3s; }
+.certifications-grid .certification-card:nth-child(4n + 4) { border-left-color: #dc3545; animation-delay: 0.4s; }
+
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.certification-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.issuer-logo {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary-text-color);
+}
+
+.certification-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.certification-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.certification-issuer {
+  font-size: 0.95rem;
+  color: var(--secondary-text-color);
+  margin: 0.25rem 0 0;
+}
+
+.certification-description {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  flex-grow: 1; /* Pushes the button to the bottom */
+  margin-bottom: 1.5rem;
+}
+
+/* --- Polished Verify Button --- */
+.verify-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--btn-light-bg);
+  color: var(--primary-text-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: auto; /* Aligns button to the bottom */
+  transition: all 0.3s ease;
+}
+
+.verify-button:hover {
+  background-color: var(--primary-text-color);
+  color: #ffffff;
+  border-color: var(--primary-text-color);
+  transform: scale(1.03);
+}

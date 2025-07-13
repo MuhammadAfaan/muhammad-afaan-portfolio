@@ -1,0 +1,102 @@
+.about-section {
+  padding: 1.5rem 4rem;
+  background-color: var(--bg-color);
+}
+
+.about-container {
+  max-width: 960px; /* Optimal width for this layout */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Re-using these title styles for consistency */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+  color: var(--primary-text-color);
+  display: inline-block;
+  position: relative;
+}
+
+.about-underline {
+  background-color: #007bff; /* Blue accent for this section */
+}
+
+/* --- Main Content Layout --- */
+.about-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image column is 1/3, text is 2/3 */
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* --- Image & Animation --- */
+@keyframes popIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.about-image-container {
+    animation: popIn 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- Text Content & Animation --- */
+.about-text-container {
+    animation: fadeInRight 0.7s 0.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.about-text-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-text-color);
+}
+
+.about-signature {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 2.8rem;
+  color: var(--primary-text-color);
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .about-content-wrapper {
+    grid-template-columns: 1fr; /* Stack image and text on top of each other */
+    gap: 2.5rem;
+  }
+  .about-image-container {
+      text-align: center;
+  }
+  .profile-image {
+      max-width: 200px;
+  }
+  .about-signature {
+      text-align: left;
+  }
+}
