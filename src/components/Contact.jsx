@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 
 function Contact() {
@@ -23,22 +23,27 @@ function Contact() {
             </div>
             <div className="info-item">
               <FaEnvelope className="info-icon" />
-              <span>mfaan.bsds23seecs@seecs.edu.pk</span>
+              <span>affansheikh500@gmail.com</span>
             </div>
             <div className="info-item">
               <FaPhone className="info-icon" />
               <span>+92 345 7259290</span>
             </div>
             <div className="contact-socials">
-              <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-              <a href="#" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+              <a href="https://www.linkedin.com/in/muhammad-afaan/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+              <a href="https://github.com/MuhammadAfaan" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+              <a href="https://wa.me/923457259290" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
             </div>
           </div>
 
           {/* Right Side: Contact Form */}
           <div className="contact-form-container">
-            <form className="contact-form">
+            {/* The form now points to your specific Formspree endpoint */}
+            <form 
+              action="https://formspree.io/f/xqalzbzj" 
+              method="POST" 
+              className="contact-form"
+            >
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
                 <input type="text" id="name" name="name" required />

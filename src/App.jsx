@@ -15,15 +15,13 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About /> {/* Add the About component here */}
-        <Education /> {/* Add the Education component here */}
-        <Experience /> {/* Add the Experience component here */}
-        <Projects /> {/* Add the Projects component here */}
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
         <Skills />
-        <Certifications /> {/* Add the Certifications component here */}
-        <Contact /> {/* Add the Contact component here */}
-        {/* Add other components like Skills, Certifications, Contact as needed */}
-        {/* Add other components like Projects, Skills, Certifications, Contact as needed */}
+        <Certifications />
+        <Contact />
       </main>
       <Footer />
     </>
