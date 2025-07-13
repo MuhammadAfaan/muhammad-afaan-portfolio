@@ -88,13 +88,3 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
-
-/* Responsive adjustments */
-@media screen and (max-width: 992px) {
-  .header-nav {
-    display: none; /* Hide navigation on smaller screens for simplicity */
-  }
-  .site-header {
-    padding: 1rem 2rem;
-  }
-}
