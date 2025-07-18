@@ -11,13 +11,7 @@ import pos from '../assets/pos.png';
 
 // Project data is now cleanly organized in an array for better readability
 const projectList = [
-  {
-    title: "HissabDost - Financial Buddy",
-    description: "A personal finance tracker with a chatbot that analyzes spending, generates reports, and provides financial insights.",
-    tags: ["React", "JavaScript", "LLM", "Automation", "Chatbot"],
-    image: hissabdost,
-    repoLink: "https://hissabdost.cloud/"
-  },
+
   {
     title: "T20 Runs Predictor",
     description: "Developed a cricket runs prediction model using XGBoost, including full data cleaning, feature engineering, and EDA.",
